@@ -1,0 +1,65 @@
+<sdf version='1.7'>
+  <model name='realsense2_camera'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.0106 0.0175 0.0125 0 -0 0</pose>
+        <mass>0.072</mass>
+        <inertia>
+          <ixx>0.00388124</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00049894</iyy>
+          <iyz>0</iyz>
+          <izz>0.00387926</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__camera_link_collision'>
+        <pose>0.0106 0 0.0125 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02505 0.09 0.025</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__camera_usb_plug_link_collision_1'>
+        <pose>0.00455 -0.057725 0.0125 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/intel/realsense/install/realsense2_description/share/realsense2_description/meshes/plug_collision.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__camera_link_visual'>
+        <pose>0.0149 0 0.0125 1.5708 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/intel/realsense/install/realsense2_description/share/realsense2_description/meshes/d435.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Grey</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__camera_usb_plug_link_visual_1'>
+        <pose>0.00455 -0.057725 0.0125 0 -0 1.5708</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file:///home/intel/realsense/install/realsense2_description/share/realsense2_description/meshes/plug.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
